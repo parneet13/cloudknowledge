@@ -8,4 +8,4 @@ RUN unzip canvas.zip
 RUN cp -rvf canvas/* .
 RUN rm -rf canvas.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPPOSE 80
+EXPOSE 80
