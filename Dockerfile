@@ -7,6 +7,5 @@ WORKDIR /var/www/html
 RUN unzip canvas.zip
 RUN cp -rvf canvas/* .
 RUN rm -rf canvas.zip
-RUN systemctl start httpd -y
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
