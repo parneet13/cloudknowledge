@@ -1,5 +1,5 @@
 FROM centos:latest
-RUN yun install -y httpd \
+RUN yum install -y httpd \
  zip \
  unzip 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/canvas.zip /var/www/html/
