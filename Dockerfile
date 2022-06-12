@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-RUN yum  install -y httpd \
+RUN apt-get update -y && apt-get install -y apache2 \
  zip \
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/canvas.zip /var/www/html/
