@@ -7,5 +7,5 @@ WORKDIR /var/www/html
 RUN unzip canvas.zip
 RUN cp -rvf canvas/* .
 RUN rm -rf canvas.zip
-CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+RUN service apache2 start -y
 EXPOSE 80
