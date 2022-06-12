@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM ubuntu:14.04
 RUN apt-get update -y && apt-get install -y apache2 \
  zip \
  unzip
