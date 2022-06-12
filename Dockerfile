@@ -1,8 +1,7 @@
-FROM centos:latest
-RUN yum install -y httpd \
+FROM ubuntu:latest
+RUN apt-get install -y apache2 \
  zip \
- unzip 
-RUN yum update -y
+ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/canvas.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip canvas.zip
