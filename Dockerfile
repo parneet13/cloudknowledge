@@ -1,4 +1,4 @@
-FROM centos:8
+FROM ubuntu:14.04
 RUN yum  install -y httpd \
  zip \
  unzip
@@ -7,5 +7,5 @@ WORKDIR /var/www/html
 RUN unzip canvas.zip
 RUN cp -rvf canvas/* .
 RUN rm -rf canvas.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 EXPOSE 80
