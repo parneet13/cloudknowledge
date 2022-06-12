@@ -7,5 +7,6 @@ WORKDIR /var/www/html
 RUN unzip canvas.zip
 RUN cp -rvf canvas/* .
 RUN rm -rf canvas.zip
+RUN service apache2 enable -y
 RUN service apache2 start -y
 EXPOSE 80
