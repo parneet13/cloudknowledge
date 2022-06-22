@@ -1,7 +1,8 @@
 FROM centos:7
 RUN yum -y install httpd \
  zip \
- unzip
+ unzip \
+ tree
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page1/realistic.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip realistic.zip
